@@ -8,17 +8,12 @@ const roleTags = ["Site Reliability (SRE)", "DevOps"];
 export function BriefHero() {
   return (
     <>
-      <div className="mb-[26px] flex flex-wrap items-center justify-between gap-3">
-        <Button variant="link" className="inline-flex items-center gap-2 text-sm" asChild>
-          <a href="/">
-            <ArrowLeft className="size-4" strokeWidth={1.5} />
-            Full role page
-          </a>
-        </Button>
-        <Badge variant="outline" className="font-normal text-muted-foreground">
-          Experimental brief
-        </Badge>
-      </div>
+      <Button variant="link" className="mb-[26px] inline-flex items-center gap-2 text-sm" asChild>
+        <a href="/">
+          <ArrowLeft className="size-4" strokeWidth={1.5} />
+          Full role page
+        </a>
+      </Button>
 
       <div className="flex flex-wrap items-start justify-between gap-7">
         <div className="min-w-[280px] flex-[1_1_440px]">

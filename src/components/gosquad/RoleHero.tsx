@@ -25,7 +25,7 @@ export function RoleHero() {
           </a>
         </Button>
         <Button variant="link" className="text-sm text-muted-foreground" asChild>
-          <a href="/brief">Try experimental brief →</a>
+          <a href="/brief">Role brief →</a>
         </Button>
       </div>
 
