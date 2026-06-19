@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { AppHeader } from "@/components/gosquad/AppHeader";
 import { PageCanvas } from "@/components/gosquad/PageCanvas";
+import { BriefActionBar } from "@/components/gosquad/brief/BriefActionBar";
 import { BriefHero } from "@/components/gosquad/brief/BriefHero";
 import {
   BriefArchetypeGrid,
@@ -73,6 +74,8 @@ export default function RoleBriefPage() {
           <BriefCompanyChips />
         </div>
       </main>
+
+      <BriefActionBar />
     </PageCanvas>
   );
 }

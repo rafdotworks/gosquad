@@ -1,16 +1,8 @@
-import {
-  ArrowLeft,
-  Bookmark,
-  Briefcase,
-  DollarSign,
-  Download,
-  Hash,
-  MapPin,
-  Send,
-} from "lucide-react";
+import { ArrowLeft, Briefcase, DollarSign, Hash, MapPin } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { MetaItem } from "@/components/gosquad/MetaItem";
+import { RoleActions } from "@/components/gosquad/RoleActions";
 
 const roleTags = ["Site Reliability (SRE)", "DevOps"];
 
@@ -56,22 +48,7 @@ export function RoleHero() {
           </div>
         </div>
 
-        <div className="flex min-w-[210px] flex-col gap-2.5">
-          <Button size="lg" className="w-full">
-            <Send className="size-4" strokeWidth={2} />
-            Submit candidate
-          </Button>
-          <div className="flex gap-2.5">
-            <Button variant="outline" size="sm" className="flex-1">
-              <Download className="size-[15px]" strokeWidth={1.5} />
-              Export JD
-            </Button>
-            <Button variant="outline" size="sm" className="flex-1">
-              <Bookmark className="size-[15px]" strokeWidth={1.5} />
-              Save
-            </Button>
-          </div>
-        </div>
+        <RoleActions />
       </div>
     </>
   );

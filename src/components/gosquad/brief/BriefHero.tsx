@@ -1,7 +1,8 @@
-import { ArrowLeft, Briefcase, DollarSign, Hash, MapPin, Send } from "lucide-react";
+import { ArrowLeft, Briefcase, DollarSign, Hash, MapPin } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { MetaItem } from "@/components/gosquad/MetaItem";
+import { RoleActions } from "@/components/gosquad/RoleActions";
 
 const roleTags = ["Site Reliability (SRE)", "DevOps"];
 
@@ -42,10 +43,7 @@ export function BriefHero() {
           </div>
         </div>
 
-        <Button size="lg" className="min-w-[210px] shrink-0">
-          <Send className="size-4" strokeWidth={2} />
-          Submit candidate
-        </Button>
+        <RoleActions id="brief-hero-actions" className="shrink-0" />
       </div>
     </>
   );
