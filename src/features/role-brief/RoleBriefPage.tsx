@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { AppHeader } from "@/components/gosquad/AppHeader";
+import { PageCanvas } from "@/components/gosquad/PageCanvas";
 import { BriefHero } from "@/components/gosquad/brief/BriefHero";
 import {
   BriefArchetypeGrid,
@@ -47,7 +48,7 @@ export default function RoleBriefPage() {
   }
 
   return (
-    <div className="relative min-h-screen bg-background font-sans text-foreground">
+    <PageCanvas>
       <AppHeader />
 
       <main
@@ -66,12 +67,12 @@ export default function RoleBriefPage() {
           <PitchBlock />
         </div>
 
-        <div className="mt-20 border-t border-border pt-20">
+        <div className="mt-16 pt-16">
           <FitSection />
           <BriefArchetypeGrid />
           <BriefCompanyChips />
         </div>
       </main>
-    </div>
+    </PageCanvas>
   );
 }

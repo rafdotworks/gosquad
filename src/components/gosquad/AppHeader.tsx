@@ -11,7 +11,7 @@ const navItems = [
 
 export function AppHeader() {
   return (
-    <header className="border-b border-border bg-background">
+    <header className="border-b border-border bg-background/85 backdrop-blur-sm">
       <div className="mx-auto flex h-[58px] max-w-[1180px] items-center justify-between px-7">
         <div className="flex items-center gap-2">
           <span className="inline-flex gap-[2.5px]" aria-hidden="true">

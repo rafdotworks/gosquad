@@ -7,7 +7,6 @@ import {
 } from "@/features/role-brief/data/role-brief.data";
 import { HmVideoEmbed } from "@/components/gosquad/brief/HmVideoEmbed";
 import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
 
 function CopyButton({ label, value }: { label: string; value: string }) {
   const [copied, setCopied] = useState(false);
@@ -78,13 +77,13 @@ export function PitchBlock() {
         ) : null}
       </div>
 
-      <div className="mt-10 flex flex-wrap gap-8 border-t border-border pt-8">
+      <div className="mt-10 flex flex-col gap-5 border-y border-border py-5 sm:flex-row sm:items-start sm:justify-between sm:gap-6">
         {pitchProof.map((stat) => (
-          <div key={stat.k} className="flex items-start gap-3">
-            <stat.icon className="mt-0.5 size-[18px] shrink-0 text-muted-foreground" strokeWidth={1.5} />
+          <div key={stat.k} className="flex items-center gap-3.5">
+            <stat.icon className="size-[18px] shrink-0 text-muted-foreground" strokeWidth={1.5} />
             <div>
-              <div className="text-xs font-medium text-muted-foreground">{stat.k}</div>
-              <div className={cn("mt-0.5 text-[15px] text-body")}>{stat.v}</div>
+              <div className="text-xs text-muted-foreground">{stat.k}</div>
+              <div className="mt-1 text-[15px] font-medium leading-snug text-foreground">{stat.v}</div>
             </div>
           </div>
         ))}

@@ -127,6 +127,21 @@
   transform: none;
 }
 
+@utility page-gradient {
+  background: linear-gradient(
+    180deg,
+    var(--color-background) 0%,
+    var(--color-background) 42%,
+    color-mix(in srgb, var(--color-secondary) 28%, var(--color-background)) 100%
+  );
+}
+
+@utility scroll-invite-bottom {
+  @apply pointer-events-none fixed inset-x-0 bottom-0 z-20 h-7;
+  @apply bg-gradient-to-t from-background/95 via-background/55 to-transparent;
+  @apply backdrop-blur-[2px];
+}
+
 @media (prefers-reduced-motion: reduce) {
   .mount {
     opacity: 1 !important;

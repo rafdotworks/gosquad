@@ -41,9 +41,13 @@ Phase 2 shadcn redesign complete locally. Role page uses composed Gosquad compon
 
 **Label hierarchy update (Executor):** Replaced all-caps mono section/field labels with softer sentence-case sans typography via updated `Eyebrow` + new `FieldLabel`. At a glance section given more padding, larger values, prominent eyebrow, subtle background, and lg column dividers.
 
+**Brief archetypes IA (Executor):** Replaced 3-column archetype grid on `/brief` with tab selector + single focused card. Green flags collapsed behind click-to-reveal (matches Fit disqualifiers pattern). Build passes.
+
+**Page gradient + scroll fade (Executor):** Added `page-gradient` and `scroll-invite-bottom` utilities in `global.css`, shared `PageCanvas` wrapper on `/` and `/brief`, and semi-transparent `AppHeader`. Build passes.
+
 ## Executor's Feedback or Assistance Requests
 
-Awaiting planner confirmation on label hierarchy update. Please visually verify At a glance spacing in dev server (`npm run dev`). Vercel deploy attempted — may need user to run `vercel deploy --prod` if CLI auth unavailable.
+Awaiting planner confirmation on label hierarchy update. Please visually verify At a glance spacing and new page gradient/scroll fade in dev server (`npm run dev`). Vercel deploy attempted — may need user to run `vercel deploy --prod` if CLI auth unavailable.
 
 ## Lessons
 
