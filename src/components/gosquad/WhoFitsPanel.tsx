@@ -19,6 +19,7 @@ import { cn } from "@/lib/utils";
 
 interface WhoFitsPanelProps {
   className?: string;
+  onOpenPipeline?: () => void;
 }
 
 function SectionLabel({
@@ -47,7 +48,7 @@ function SectionLabel({
   );
 }
 
-export function WhoFitsPanel({ className }: WhoFitsPanelProps) {
+export function WhoFitsPanel({ className, onOpenPipeline }: WhoFitsPanelProps) {
   return (
     <div className={cn("max-lg:static lg:sticky lg:top-6", className)}>
       <Card className="overflow-hidden rounded-[22px] shadow-[0_1px_3px_rgba(22,21,15,0.04)]">
@@ -138,8 +139,12 @@ export function WhoFitsPanel({ className }: WhoFitsPanelProps) {
               </div>
             ))}
           </div>
-          <Button variant="link" className="mt-3 text-[12.5px] font-medium" asChild>
-            <a href="#">See all in Pipeline →</a>
+          <Button
+            variant="link"
+            className="mt-3 text-[12.5px] font-medium"
+            onClick={onOpenPipeline}
+          >
+            See all in Pipeline →
           </Button>
         </div>
 

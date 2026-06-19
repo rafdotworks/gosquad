@@ -49,8 +49,8 @@ export interface DealRow {
 }
 
 export interface RoleTab {
-  t: string;
-  active: boolean;
+  value: string;
+  label: string;
 }
 
 export const tldr: TldrItem[] = [
@@ -190,11 +190,13 @@ export const backers: string[] = [
 ];
 
 export const roleTabs: RoleTab[] = [
-  { t: "Role information", active: true },
-  { t: "Pipeline", active: false },
-  { t: "Candidates in process", active: false },
-  { t: "Updates", active: false },
+  { value: "role-information", label: "Role information" },
+  { value: "pipeline", label: "Pipeline" },
+  { value: "candidates-in-process", label: "Candidates in process" },
+  { value: "updates", label: "Updates" },
 ];
+
+export const DEFAULT_ROLE_TAB = roleTabs[0].value;
 
 export const dealRows: DealRow[] = [
   { k: "Location", v: "Americas or EMEA", code: false },
