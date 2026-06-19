@@ -1,4 +1,5 @@
 import { targetCompanies } from "@/features/role-page/data/role-page.data";
+import { CompanyLogo } from "@/components/gosquad/CompanyLogo";
 import { Eyebrow } from "@/components/gosquad/Eyebrow";
 import { Badge } from "@/components/ui/badge";
 
@@ -12,9 +13,7 @@ export function CompanyChips() {
       <div className="flex flex-wrap gap-2.5">
         {targetCompanies.map((company) => (
           <Badge key={company} variant="company">
-            <span className="inline-flex size-[17px] items-center justify-center rounded-[5px] border border-border bg-card font-mono text-[10px] font-medium text-muted-foreground">
-              {company[0]}
-            </span>
+            <CompanyLogo company={company} />
             {company}
           </Badge>
         ))}

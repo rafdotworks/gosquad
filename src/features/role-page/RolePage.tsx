@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { AppHeader } from "@/components/gosquad/AppHeader";
+import { PageCanvas } from "@/components/gosquad/PageCanvas";
 import { ArchetypeGrid } from "@/components/gosquad/ArchetypeGrid";
 import { AtAGlanceGrid } from "@/components/gosquad/AtAGlanceGrid";
 import { CandidatesInProcessPanel } from "@/components/gosquad/CandidatesInProcessPanel";
@@ -40,10 +41,7 @@ export default function RolePage() {
   };
 
   return (
-    <div
-      ref={containerRef}
-      className="relative min-h-screen bg-background font-sans text-foreground"
-    >
+    <PageCanvas ref={containerRef}>
       <AppHeader />
 
       <main
@@ -91,6 +89,6 @@ export default function RolePage() {
       </main>
 
       <CommentPins {...comments} />
-    </div>
+    </PageCanvas>
   );
 }
