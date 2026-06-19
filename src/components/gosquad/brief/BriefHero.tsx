@@ -1,32 +1,23 @@
-import {
-  ArrowLeft,
-  Bookmark,
-  Briefcase,
-  DollarSign,
-  Download,
-  Hash,
-  MapPin,
-  Send,
-} from "lucide-react";
+import { ArrowLeft, Briefcase, DollarSign, Hash, MapPin, Send } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { MetaItem } from "@/components/gosquad/MetaItem";
 
 const roleTags = ["Site Reliability (SRE)", "DevOps"];
 
-export function RoleHero() {
+export function BriefHero() {
   return (
     <>
       <div className="mb-[26px] flex flex-wrap items-center justify-between gap-3">
         <Button variant="link" className="inline-flex items-center gap-2 text-sm" asChild>
-          <a href="#">
+          <a href="/">
             <ArrowLeft className="size-4" strokeWidth={1.5} />
-            Back to browse roles
+            Full role page
           </a>
         </Button>
-        <Button variant="link" className="text-sm text-muted-foreground" asChild>
-          <a href="/brief">Try experimental brief →</a>
-        </Button>
+        <Badge variant="outline" className="font-normal text-muted-foreground">
+          Experimental brief
+        </Badge>
       </div>
 
       <div className="flex flex-wrap items-start justify-between gap-7">
@@ -40,7 +31,7 @@ export function RoleHero() {
             ))}
           </div>
 
-          <h1 className="font-display mb-[18px] text-[38px] leading-[1.1] font-light tracking-[-0.02em] text-foreground">
+          <h1 className="font-display mb-[18px] text-[34px] leading-[1.12] font-light tracking-[-0.02em] text-foreground sm:text-[38px]">
             Senior DevOps / SRE Engineer
           </h1>
 
@@ -56,22 +47,10 @@ export function RoleHero() {
           </div>
         </div>
 
-        <div className="flex min-w-[210px] flex-col gap-2.5">
-          <Button size="lg" className="w-full">
-            <Send className="size-4" strokeWidth={2} />
-            Submit candidate
-          </Button>
-          <div className="flex gap-2.5">
-            <Button variant="outline" size="sm" className="flex-1">
-              <Download className="size-[15px]" strokeWidth={1.5} />
-              Export JD
-            </Button>
-            <Button variant="outline" size="sm" className="flex-1">
-              <Bookmark className="size-[15px]" strokeWidth={1.5} />
-              Save
-            </Button>
-          </div>
-        </div>
+        <Button size="lg" className="min-w-[210px] shrink-0">
+          <Send className="size-4" strokeWidth={2} />
+          Submit candidate
+        </Button>
       </div>
     </>
   );
