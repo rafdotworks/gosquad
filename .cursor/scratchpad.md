@@ -45,6 +45,8 @@ Phase 2 shadcn redesign complete locally. Role page uses composed Gosquad compon
 
 **Page gradient + scroll fade (Executor):** Added `page-gradient` and `scroll-invite-bottom` utilities in `global.css`, shared `PageCanvas` wrapper on `/` and `/brief`, and semi-transparent `AppHeader`. Build passes.
 
+**Brief CTAs (Executor):** Extracted shared `RoleActions` (Submit + Export JD + Save). Brief hero now matches role page CTA stack. Added `BriefActionBar` — sticky bottom bar slides in once hero CTAs scroll off-screen; primary Submit stays full-width with compact icon buttons for Export/Save. Build passes.
+
 ## Executor's Feedback or Assistance Requests
 
 Awaiting planner confirmation on label hierarchy update. Please visually verify At a glance spacing and new page gradient/scroll fade in dev server (`npm run dev`). Vercel deploy attempted — may need user to run `vercel deploy --prod` if CLI auth unavailable.
